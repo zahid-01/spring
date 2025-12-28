@@ -11,7 +11,10 @@ public class App {
     public static void main(String[] args) {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
         Alien ao1 = (Alien) ctx.getBean("alien");
+//        ctx.getBean("comp");
+//        ctx.getBean("comp");
+//        ctx.getBean("comp");
 
-        ao1.code();
+//        ao1.code();
     }
 }

@@ -10,9 +10,9 @@ public class Alien {
 //        this.age = age;
 //    }
 
-//    Alien() {
-//        System.out.println("Alien constructor");
-//    }
+    Alien() {
+        System.out.println("Alien constructor");
+    }
 
     public int getAge() {
         return age;
