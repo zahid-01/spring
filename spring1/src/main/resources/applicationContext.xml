@@ -7,7 +7,7 @@
     <!-- bean definitions here -->
 
     <!--    <bean id="alien" class="org.example.Alien" scope="prototype"/>--> <!--another scope is singleton, singleton creates only one bean no matter how many times you ask for it -->
-    <bean id="alien" class="org.example.Alien">
+    <bean id="alien" class="org.example.Alien" autowire="byName">
         <!--        <property name="age" value="20"/>-->
         <!--        <property name="laptop" ref="comp1"/>-->
 
@@ -16,9 +16,11 @@
 
         <!--        <constructor-arg index="1" ref="desktopBean"/>-->
         <!--        <constructor-arg value="20" index="0"/>-->
+        <property name="comp">
+            <bean id="comp" class="org.example.Laptop" scope="prototype" primary="true" lazy-init="true"/>
+        </property>
     </bean>
 
-    <bean id="comp" class="org.example.Laptop" scope="prototype" primary="true" lazy-init="true"/>
     <bean id="comp1" class="org.example.Desktop"/>
 
 </beans>
