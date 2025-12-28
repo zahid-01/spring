@@ -12,6 +12,6 @@ public class App {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
         Alien ao1 = (Alien) ctx.getBean("alien");
 
-        System.out.println(ao1.getAge());
+        ao1.code();
     }
 }

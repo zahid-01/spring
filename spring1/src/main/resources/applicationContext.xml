@@ -9,5 +9,9 @@
     <!--    <bean id="alien" class="org.example.Alien" scope="prototype"/>-->
     <bean id="alien" class="org.example.Alien" scope="prototype">
         <property name="age" value="20"/>
+        <property name="laptop" ref="laptopBean"/>
     </bean>
+
+    <bean id="laptopBean" class="org.example.Laptop"/>
+
 </beans>
