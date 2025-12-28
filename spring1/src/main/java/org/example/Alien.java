@@ -2,8 +2,13 @@ package org.example;
 
 public class Alien {
     private int age;
+    private Computer comp;
 
-    private Laptop laptop;
+    public Alien(int age, Computer comp) {
+        System.out.println("Alien constructor");
+        this.comp = comp;
+        this.age = age;
+    }
 
     Alien() {
         System.out.println("Alien constructor");
@@ -17,16 +22,16 @@ public class Alien {
         this.age = age;
     }
 
-    public Laptop getLaptop() {
-        return laptop;
+    public Computer getLaptop() {
+        return comp;
     }
 
-    public void setLaptop(Laptop laptop) {
-        this.laptop = laptop;
+    public void setLaptop(Computer comp) {
+        this.comp = comp;
     }
 
     void code() {
         System.out.println("Alien code");
-        laptop.cpu();
+        comp.compile();
     }
 }

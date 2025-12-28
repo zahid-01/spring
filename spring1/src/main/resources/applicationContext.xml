@@ -6,12 +6,19 @@
 
     <!-- bean definitions here -->
 
-    <!--    <bean id="alien" class="org.example.Alien" scope="prototype"/>-->
+    <!--    <bean id="alien" class="org.example.Alien" scope="prototype"/>--> <!--another scope is singleton-->
     <bean id="alien" class="org.example.Alien" scope="prototype">
-        <property name="age" value="20"/>
-        <property name="laptop" ref="laptopBean"/>
+        <!--        <property name="age" value="20"/>-->
+        <!--        <property name="laptop" ref="laptopBean"/>-->
+
+        <!--        <constructor-arg value="20"/>-->
+        <!--        <constructor-arg ref="laptopBean"/>-->
+
+        <constructor-arg index="1" ref="desktopBean"/>
+        <constructor-arg value="20" index="0"/>
     </bean>
 
     <bean id="laptopBean" class="org.example.Laptop"/>
+    <bean id="desktopBean" class="org.example.Desktop"/>
 
 </beans>
