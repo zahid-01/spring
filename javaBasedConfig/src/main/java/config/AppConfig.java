@@ -5,29 +5,29 @@ import org.example.Computer;
 import org.example.Desktop;
 import org.example.Laptop;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.*;
 
 @Configuration
+@ComponentScan("org.example")
 public class AppConfig {
 
-    @Bean
-    public Alien alien(@Autowired Computer comp) {
-        Alien ao = new Alien();
-        ao.setComp(comp);
-        return ao;
-    }
-
-
-//    @Bean(name = {"zahid", "hp"})
-
-    /// /    @Scope("prototype")
+//    @Bean
+//    public Alien alien(Computer comp) {  //@Qualifier("laptop")
+//        Alien ao = new Alien();
+//        ao.setComp(comp);
+//        return ao;
+//    }
+//
+//
+//    @Bean
 //    public Desktop desktop() {
 //        return new Desktop();
 //    }
-    @Bean
-    public Laptop laptop() {
-        return new Laptop();
-    }
+//
+//    @Bean
+//    @Primary
+//    public Laptop laptop() {
+//        return new Laptop();
+//    }
 }
